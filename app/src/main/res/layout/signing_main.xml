@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sign"
+    android:clipToPadding="false"
+    android:paddingBottom="30dp">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sign"
+        android:clipToPadding="false"
+        android:paddingBottom="40dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:id="@+id/imgPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:visibility="gone" />
+
+        <com.github.gcacace.signaturepad.views.SignaturePad xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/signature_pad"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/colorwhite"
+            app:penColor="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/bottom_laypout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signature_pad"
+            android:layout_marginTop="30dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_clr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear" />
+
+            <Button
+                android:id="@+id/btn_save"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+
+                android:text="Save" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_selcet_from_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bottom_laypout"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="Path here" />
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
